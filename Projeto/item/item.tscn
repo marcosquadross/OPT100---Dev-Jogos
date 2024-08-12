@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ybilt8xnf4t4"]
 
 [ext_resource type="Script" path="res://item/item.gd" id="1_d2a3m"]
-[ext_resource type="Texture2D" uid="uid://cuwgrmwey3cjc" path="res://item/item.png" id="1_ns3wu"]
+[ext_resource type="Texture2D" uid="uid://ba7xshm3cware" path="res://item/peixe.png" id="2_7iv51"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w4mpe"]
 radius = 11.0
@@ -33,7 +33,7 @@ collision_mask = 0
 script = ExtResource("1_d2a3m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_ns3wu")
+texture = ExtResource("2_7iv51")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_w4mpe")

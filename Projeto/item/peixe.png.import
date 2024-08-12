@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8l5ctsxlymbq"
-path="res://.godot/imported/Fundo_Fase1.1.png-1e11787412d332aa9267778d6373dad1.ctex"
+uid="uid://ba7xshm3cware"
+path="res://.godot/imported/peixe.png-bc548cd108094faa761042eb543b9e76.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level/Fundo_Fase1.1.png"
-dest_files=["res://.godot/imported/Fundo_Fase1.1.png-1e11787412d332aa9267778d6373dad1.ctex"]
+source_file="res://item/peixe.png"
+dest_files=["res://.godot/imported/peixe.png-bc548cd108094faa761042eb543b9e76.ctex"]
 
 [params]
 
