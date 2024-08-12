@@ -7,6 +7,7 @@ const FRICTION: float = 900
 const JUMP_VELOCITY: float = -1400
 const JUMP_VELOCITY_MIN: float = JUMP_VELOCITY/3
 const MAX_JUMP_HOLD: int = 2000
+const DOUBLE_JUMP_FORCE: int = 500
 
 @onready var _animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 var jump_time: float = 0
@@ -15,6 +16,7 @@ var _direction = 1
 var _is_double_jump: bool = false
 var _start_posisition: Vector2
 var _last_checkpoint = 1
+var double_jump_power_up: bool = true
 
 func _ready():
 	_start_posisition = position;
@@ -32,16 +34,22 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump"):
 		jump_time = Time.get_ticks_msec()
 	if Input.is_action_just_released("jump"):
-		if is_on_floor() or not _is_double_jump:
+		if is_on_floor() or (not _is_double_jump and double_jump_power_up):
 			var time_now = Time.get_ticks_msec() - jump_time
 			var jump_force = min(time_now, MAX_JUMP_HOLD)
+			if(not is_on_floor() and jump_force > MAX_JUMP_HOLD):
+				jump_force = MAX_JUMP_HOLD 
 			jump_force = jump_force/MAX_JUMP_HOLD
 	
 			if jump_force >= 0.7:
 				jump_force = 0.7
 			print(jump_force)
-			velocity.y = JUMP_VELOCITY * jump_force
-			velocity.x = input * JUMP_VELOCITY_MIN * jump_force * -1
+			if(is_on_floor()):
+				velocity.y = JUMP_VELOCITY * jump_force
+				velocity.x = input * JUMP_VELOCITY_MIN * jump_force * -1
+			else:
+				velocity.y = JUMP_VELOCITY * 0.5
+				velocity.x = input * JUMP_VELOCITY_MIN * jump_force * -1
 			
 			print(jump_force)
 			if not is_on_floor():
@@ -60,8 +68,10 @@ func _process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0 * SPEED, ACCELERATION * delta)
 			_direction = sign(input)
 		else:
-			print(input)
-			velocity.x = move_toward(velocity.x, input * 250, ACCELERATION * delta)
+			#print(input)
+			if(velocity.y <= 0):
+				velocity.x = move_toward(velocity.x, input * 250, ACCELERATION * delta * 2)
+			
 			_direction = sign(input)
 	else:
 		velocity.x = move_toward(velocity.x, 0, FRICTION * delta)
