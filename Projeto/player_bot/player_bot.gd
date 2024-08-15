@@ -16,7 +16,7 @@ var _direction = 1
 var _is_double_jump: bool = false
 var _start_posisition: Vector2
 var _last_checkpoint = 1
-var double_jump_power_up: bool = true
+var double_jump_power_up: bool = false
 
 func _ready():
 	_start_posisition = position;

@@ -5,6 +5,7 @@ var _timer: Timer
 var _shaking: bool = false
 var _shake_range: float = 5
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if _shaking:
