@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bcgsm88544px4"]
+[gd_scene load_steps=26 format=3 uid="uid://bcgsm88544px4"]
 
 [ext_resource type="Script" path="res://player_bot/player_bot.gd" id="1_coaxk"]
 [ext_resource type="Shader" path="res://level/outline.gdshader" id="2_3njel"]
@@ -32,10 +32,6 @@ region = Rect2(192, 0, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_e5o2v"]
 atlas = ExtResource("2_ohtms")
 region = Rect2(256, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1pvm3"]
-atlas = ExtResource("2_ohtms")
-region = Rect2(320, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3m3qw"]
 atlas = ExtResource("3_g6nst")
@@ -90,9 +86,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_e5o2v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1pvm3")
 }],
 "loop": false,
 "name": &"fall",
@@ -157,7 +150,7 @@ script = ExtResource("1_coaxk")
 material = SubResource("ShaderMaterial_5j71v")
 position = Vector2(-2, 0)
 sprite_frames = SubResource("SpriteFrames_5h44o")
-animation = &"idle"
+animation = &"fall"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
