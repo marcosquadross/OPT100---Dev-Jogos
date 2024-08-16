@@ -34,7 +34,7 @@ func shake_camera(amount: float, duration: float) -> void:
 
 func init_camera_limits(map_bounds: Rect2) -> void:
 	# inject into player's camera
-	set_limit(Side.SIDE_LEFT, int(map_bounds.position.x))
-	set_limit(Side.SIDE_RIGHT, int(map_bounds.size.x + map_bounds.position.x))
+	set_limit(Side.SIDE_LEFT, int(-95))
+	set_limit(Side.SIDE_RIGHT, int(928))
 	set_limit(Side.SIDE_TOP, int(map_bounds.position.y))
 	set_limit(Side.SIDE_BOTTOM, int(map_bounds.size.y + map_bounds.position.y))
