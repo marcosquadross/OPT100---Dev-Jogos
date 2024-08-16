@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Projeto"
-run/main_scene="res://level1.tscn"
+config/name="DEV"
+run/main_scene="res://screens/menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 

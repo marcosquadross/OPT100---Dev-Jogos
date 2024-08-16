@@ -1,3 +1,2 @@
-res://level1.tscn
-res://player_bot/player_bot.gd
-res://fx/camera_shake.gd
+res://level/level1.tscn
+res://screens/menu.tscn
