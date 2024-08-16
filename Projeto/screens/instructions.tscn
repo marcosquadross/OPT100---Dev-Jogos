@@ -1,0 +1,116 @@
+[gd_scene load_steps=4 format=3 uid="uid://buu4gna2k6bk8"]
+
+[ext_resource type="Script" path="res://screens/instructions.gd" id="1_veb71"]
+[ext_resource type="Texture2D" uid="uid://brb4p3radv7q4" path="res://assets/peixe.png" id="2_anepk"]
+[ext_resource type="Texture2D" uid="uid://nsyd4fcmeqdb" path="res://assets/Key.png" id="3_ofqdu"]
+
+[node name="Instructions" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_veb71")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 1.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Voltar
+"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 49.0
+offset_top = 93.0
+offset_right = 554.0
+offset_bottom = 349.0
+scale = Vector2(0.955121, 0.96)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label2" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Controles
+            
+          Direcionar o pulo para direita             ->
+
+          Direcionar o pulo para esquerda        <-
+
+         Pular                                                 espaço"
+
+[node name="LabelPeixe" type="Label" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 427.0
+offset_right = 430.0
+offset_bottom = 461.0
+theme_override_font_sizes/font_size = 18
+text = "Peixe: Concede Score ao jogador"
+
+[node name="Peixe" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 456.0
+offset_right = 152.0
+offset_bottom = 496.0
+scale = Vector2(2.50681, 2.25187)
+texture = ExtResource("2_anepk")
+
+[node name="LabelChave" type="Label" parent="."]
+layout_mode = 0
+offset_left = 559.0
+offset_top = 408.0
+offset_right = 1055.0
+offset_bottom = 479.0
+theme_override_font_sizes/font_size = 18
+text = "Chave : Permite ao jogador abrir janelas, 
+permitindo assim que pule partes do nível."
+
+[node name="Chave" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 680.0
+offset_top = 472.0
+offset_right = 720.0
+offset_bottom = 512.0
+scale = Vector2(2.50681, 2.25187)
+texture = ExtResource("3_ofqdu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
