@@ -1,11 +1,17 @@
-[gd_scene load_steps=25 format=3 uid="uid://bcgsm88544px4"]
+[gd_scene load_steps=27 format=3 uid="uid://bcgsm88544px4"]
 
 [ext_resource type="Script" path="res://player_bot/player_bot.gd" id="1_coaxk"]
+[ext_resource type="Shader" path="res://level/outline.gdshader" id="2_3njel"]
 [ext_resource type="Texture2D" uid="uid://c66bypwkyb50f" path="res://player_bot/Cat-fall.png" id="2_ohtms"]
 [ext_resource type="Script" path="res://player_bot/item_collector.gd" id="3_0rdtv"]
 [ext_resource type="Texture2D" uid="uid://cot25xk1hices" path="res://player_bot/cat-idle.png" id="3_g6nst"]
 [ext_resource type="Texture2D" uid="uid://c5045r6ekugm3" path="res://player_bot/cat jumping.png" id="3_uo5ck"]
 [ext_resource type="AudioStream" uid="uid://di4slwgf3wwd1" path="res://sounds/jump.wav" id="6_rjmw7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5j71v"]
+shader = ExtResource("2_3njel")
+shader_parameter/line_color = Vector4(0.8, 0.8, 0.8, 0.8)
+shader_parameter/line_thickness = 0.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7k4k7"]
 atlas = ExtResource("2_ohtms")
@@ -148,12 +154,11 @@ collision_mask = 65
 script = ExtResource("1_coaxk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_5j71v")
 position = Vector2(-2, 0)
 sprite_frames = SubResource("SpriteFrames_5h44o")
-animation = &"fall"
+animation = &"idle"
 autoplay = "idle"
-frame = 5
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -167,6 +172,7 @@ collision_layer = 0
 collision_mask = 100
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtBox"]
+visible = false
 position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_1mk1q")
 

@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1723834269
+::res://::1723835619
 camera_utils.gd::GDScript::-1::1723831415::0::1::::CameraUtils<>Camera2D<>::
 game_controller.gd::GDScript::-1::1723831415::0::1::::Gamecontroller<>Node<>::
 game_init.gd::GDScript::-1::1723831415::0::1::::GameInit<>Node2D<>::
@@ -42,7 +42,7 @@ item.tscn::PackedScene::1687103054726738863::1723831415::0::1::::<><>::res://ite
 item_big.png::CompressedTexture2D::818924065364686299::1723831415::1723831415::1::::<><>::
 Key.png::CompressedTexture2D::5146685418652258325::1723831415::1723831415::1::::<><>::
 peixe.png::CompressedTexture2D::2453909794423764502::1723831415::1723831415::1::::<><>::
-::res://level/::1723835369
+::res://level/::1723835486
 background_stars.png::CompressedTexture2D::2443938784714956820::1723831415::1723831415::1::::<><>::
 block.png::CompressedTexture2D::205482416222581727::1723831415::1723831415::1::::<><>::
 block.tscn::PackedScene::712592728712645590::1723831415::0::1::::<><>::uid://c6sja1iuph1x::::res://level/block.png
@@ -52,10 +52,9 @@ City_Block.png::CompressedTexture2D::8419909005518714065::1723831415::1723831415
 foreground_stars.png::CompressedTexture2D::2408540247707860905::1723831415::1723831415::1::::<><>::
 fundo.jpg::CompressedTexture2D::5769508658005336954::1723831415::1723831415::1::::<><>::
 Fundo_Fase1.1.png::CompressedTexture2D::2340766103531333810::1723831415::1723831415::1::::<><>::
-level1.tscn::PackedScene::2109320603939109015::1723835412::0::1::::<><>::res://game_init.gd<>res://hud/label_fps.gd<>res://hud/label_items.gd<>uid://8l5ctsxlymbq::::res://level/Fundo_Fase1.1.png<>uid://bcgsm88544px4::::res://player_bot/player_bot.tscn<>res://level/player.gdshader<>res://fx/camera_shake.gd<>uid://cqp577mxrmdda::::res://level/tiles1.png<>uid://cnkv48fpubd8e::::res://checkpoint/checkpoint.tscn<>uid://ybilt8xnf4t4::::res://item/item.tscn<>uid://3fq1lil33tjn::::res://level/Bloco_Normal.png<>uid://bssk7tadk7hic::::res://level/Musgo_block.png<>uid://ct67etgy6graa::::res://level_exit/level_end.tscn
+level1.tscn::PackedScene::2109320603939109015::1723835478::0::1::::<><>::res://game_init.gd<>res://hud/label_fps.gd<>res://hud/label_items.gd<>uid://8l5ctsxlymbq::::res://level/Fundo_Fase1.1.png<>uid://bcgsm88544px4::::res://player_bot/player_bot.tscn<>res://level/outline.gdshader<>res://fx/camera_shake.gd<>uid://cqp577mxrmdda::::res://level/tiles1.png<>uid://cnkv48fpubd8e::::res://checkpoint/checkpoint.tscn<>uid://ybilt8xnf4t4::::res://item/item.tscn<>uid://3fq1lil33tjn::::res://level/Bloco_Normal.png<>uid://bssk7tadk7hic::::res://level/Musgo_block.png<>uid://ct67etgy6graa::::res://level_exit/level_end.tscn
 Musgo_block.png::CompressedTexture2D::3687643982177969710::1723831415::1723831415::1::::<><>::
-player_teste.gdshader::Shader::-1::1723835412::0::1::::<><>::
-player.gdshader::Shader::-1::1723835412::0::1::::<><>::
+outline.gdshader::Shader::-1::1723835486::0::1::::<><>::
 tiles1.png::CompressedTexture2D::5928708887446632770::1723831415::1723831415::1::::<><>::
 ::res://level_exit/::1723831415
 level_clear.gd::GDScript::-1::1723831415::0::1::::<>Node2D<>::
@@ -71,12 +70,12 @@ item_collector.gd::GDScript::-1::1723831415::0::1::::ItemCollector<>Area2D<>::
 player1_sheet.png::CompressedTexture2D::8757846293120171973::1723831415::1723831415::1::::<><>::
 player_bot.gd::GDScript::-1::1723833539::0::1::::PlayerBot<>CharacterBody2D<>::
 player_bot.tscn::PackedScene::2540300758542254495::1723831429::0::1::::<><>::res://player_bot/player_bot.gd<>uid://c66bypwkyb50f::::res://player_bot/Cat-fall.png<>res://player_bot/item_collector.gd<>uid://cot25xk1hices::::res://player_bot/cat-idle.png<>uid://c5045r6ekugm3::::res://player_bot/cat jumping.png<>uid://di4slwgf3wwd1::::res://sounds/jump.wav
-::res://screens/::1723835369
+::res://screens/::1723835477
 credits.tscn::PackedScene::159204653994099693::1723831429::0::1::::<><>::
 instructions.gd::GDScript::-1::1723831429::0::1::::<>Control<>::
 instructions.tscn::PackedScene::3833257303133492721::1723831429::0::1::::<><>::res://screens/instructions.gd<>uid://brb4p3radv7q4::::res://assets/peixe.png<>uid://nsyd4fcmeqdb::::res://assets/Key.png
 menu.gd::GDScript::-1::1723831429::0::1::::<>Control<>::
-menu.tscn::PackedScene::166920707387544313::1723835369::0::1::::<><>::res://screens/menu.gd<>uid://bejpc4j7ug61j::::res://assets/PublicPixel.ttf<>uid://d1wk4pil42r7::::res://assets/fundo.jpeg
+menu.tscn::PackedScene::166920707387544313::1723835477::0::1::::<><>::res://screens/menu.gd<>uid://bejpc4j7ug61j::::res://assets/PublicPixel.ttf<>uid://d1wk4pil42r7::::res://assets/fundo.jpeg
 ::res://sounds/::1723831429
 jump1.wav::AudioStreamWAV::4901394458007480052::1723831429::1723831429::1::::<><>::
 jump.wav::AudioStreamWAV::7781753469702060392::1723831429::1723831429::1::::<><>::

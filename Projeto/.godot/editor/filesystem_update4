@@ -1,6 +1,4 @@
+res://player_bot/player_bot.tscn
+res://level/outline.gdshader
 res://screens/menu.tscn
 res://level/level1.tscn
-res://fx/camera_shake.gd
-res://level/player_teste.gdshader
-res://level/player.gdshader
-res://level/outline.gdshader
