@@ -21,6 +21,7 @@ var _is_double_jump: bool = false
 var _start_posisition: Vector2
 var _last_checkpoint = 1
 var double_jump_power_up: bool = false
+var slow_fall_power_up: bool = false
 
 func _ready():
 	_start_posisition = position
@@ -33,18 +34,30 @@ func _process(delta: float) -> void:
 	var weapon_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
 	if not is_on_floor():
-		velocity.y += _gravity * delta
+		if(slow_fall_power_up):
+			velocity.y += _gravity * delta / 3
+			if(velocity.y <= 0):
+				velocity.y += _gravity * delta / 2
+		else:
+			velocity.y += _gravity * delta
 	
 	var input: float = Input.get_axis("ui_left", "ui_right")
 	
 	if Input.is_action_just_pressed("jump"):
 		jump_time = Time.get_ticks_msec()
-		jump_power_bar.visible = true  
+		if(is_on_floor()):
+			jump_power_bar.visible = true  
+		
+		if(not is_on_floor() and (not _is_double_jump and double_jump_power_up)):
+			velocity.y = JUMP_VELOCITY * 0.5
+			velocity.x = input * JUMP_VELOCITY_MIN * 0.5 * -1
+			_is_double_jump = true
 	
 	if Input.is_action_pressed("jump"):
 		var time_now = Time.get_ticks_msec() - jump_time
 		var jump_force = min(time_now, MAX_JUMP_HOLD) / MAX_JUMP_HOLD * MAX_JUMP_FORCE
-		
+		if(is_on_floor()):
+			jump_power_bar.visible = true
 		if jump_power_bar:
 			jump_power_bar.value = jump_force / MAX_JUMP_FORCE * 100.0
 		
@@ -55,22 +68,15 @@ func _process(delta: float) -> void:
 			jump_power_bar.value = 0  
 			jump_power_bar.visible = false  
 		
-		if is_on_floor() or (not _is_double_jump and double_jump_power_up):
+		if is_on_floor():
 			var time_now = Time.get_ticks_msec() - jump_time
 			var jump_force = min(time_now, MAX_JUMP_HOLD) / MAX_JUMP_HOLD * MAX_JUMP_FORCE
 
-			if is_on_floor():
-				velocity.y = JUMP_VELOCITY * jump_force
-				velocity.x = input * JUMP_VELOCITY_MIN * jump_force * -1
-			else:
-				velocity.y = JUMP_VELOCITY * 0.5
-				velocity.x = input * JUMP_VELOCITY_MIN * jump_force * -1
+			velocity.y = JUMP_VELOCITY * jump_force
+			velocity.x = input * JUMP_VELOCITY_MIN * jump_force * -1
 
+			_is_double_jump = false
 			jump_sfx.play()
-			if not is_on_floor():
-				_is_double_jump = true
-			else:
-				_is_double_jump = false
 	
 	if input:
 		if is_on_floor():
