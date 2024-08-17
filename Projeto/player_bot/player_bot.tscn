@@ -182,7 +182,7 @@ shape = SubResource("CapsuleShape2D_fdwr5")
 
 [node name="JumpSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_rjmw7")
-volume_db = -10.0
+volume_db = -15.0
 
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
 [connection signal="body_entered" from="HurtBox" to="." method="_on_area_2d_body_entered"]

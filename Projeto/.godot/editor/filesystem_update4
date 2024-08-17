@@ -1,5 +1,6 @@
-res://screens/menu.tscn
-res://level/outline.gdshader
 res://level/level1.tscn
-res://player_bot/player_bot.gd
+res://level/outline.gdshader
 res://player_bot/player_bot.tscn
+res://item/item.tscn
+res://level_exit/level_clear.tscn
+res://level_exit/level_end.tscn
