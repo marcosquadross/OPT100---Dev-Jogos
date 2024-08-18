@@ -1,3 +1,4 @@
+TextureRect
 VBoxContainer
 Button
 TextureProgressBar
@@ -12,4 +13,3 @@ AudioStreamPlayer
 Timer
 Label
 CollisionShape2D
-Area2D
