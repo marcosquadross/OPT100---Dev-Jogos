@@ -1,7 +1,7 @@
 extends Node
 class_name Gamecontroller
 
-var _label_item: LabelItems = null
+@onready var _label_item: LabelItems = null
 
 var score: int = 0:
 	get:
@@ -11,8 +11,10 @@ var score: int = 0:
 
 
 func _ready() -> void:
-	_label_item = $/root/World/CanvasLayerHud/LabelScore
+	#_label_item = $/root/World/CanvasLayerHud/LabelScore
+	pass
 
 func update_hud_items(value: int) -> void:
+	_label_item = $/root/World/CanvasLayerHud/LabelScore
 	_label_item.update_value(value)
 	score = value

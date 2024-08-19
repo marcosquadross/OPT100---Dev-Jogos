@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ybilt8xnf4t4"]
 
 [ext_resource type="Script" path="res://item/item.gd" id="1_d2a3m"]
-[ext_resource type="Texture2D" uid="uid://ba7xshm3cware" path="res://item/peixe.png" id="2_7iv51"]
+[ext_resource type="Texture2D" uid="uid://ba7xshm3cware" path="res://item/item.png" id="2_7iv51"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w4mpe"]
 radius = 11.0
@@ -43,3 +43,5 @@ libraries = {
 "": SubResource("AnimationLibrary_uskt0")
 }
 autoplay = "idle"
+
+[connection signal="ready" from="CollisionShape2D" to="." method="_on_collision_shape_2d_ready"]
