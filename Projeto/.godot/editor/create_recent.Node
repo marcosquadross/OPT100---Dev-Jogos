@@ -1,5 +1,15 @@
-Timer
+TextureRect
+VBoxContainer
+Button
+TextureProgressBar
+Node2D
+Node
+AnimatedSprite2D
+Control
+ProgressBar
+CanvasLayer
 AnimationPlayer
+AudioStreamPlayer
+Timer
 Label
 CollisionShape2D
-Area2D

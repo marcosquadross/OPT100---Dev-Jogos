@@ -5,73 +5,86 @@ const SPEED: float = 100
 const ACCELERATION: float = 800
 const FRICTION: float = 900
 const JUMP_VELOCITY: float = -1400
-const JUMP_VELOCITY_MIN: float = JUMP_VELOCITY/3
-const MAX_JUMP_HOLD: int = 2000
+const JUMP_VELOCITY_MIN: float = JUMP_VELOCITY / 3
+const MAX_JUMP_HOLD: int = 1500
 const DOUBLE_JUMP_FORCE: int = 500
+const MAX_JUMP_FORCE: float = 0.7 
 
 @onready var _animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var jump_sfx = $JumpSFX as AudioStreamPlayer
+@onready var jump_power_bar: ProgressBar = get_node("/root/World/CanvasLayerBar/ProgressBar")
+
 var jump_time: float = 0
-var _gravity = 980*2
+var _gravity = 980 * 2
 var _direction = 1
 var _is_double_jump: bool = false
 var _start_posisition: Vector2
 var _last_checkpoint = 1
-var double_jump_power_up: bool = true
+var double_jump_power_up: bool = false
+var slow_fall_power_up: bool = false
 
 func _ready():
-	_start_posisition = position;
+	_start_posisition = position
+	if not jump_power_bar:
+		print("Erro: ProgressBar não encontrado.")
+	else:
+		jump_power_bar.visible = false 
 
-# override
 func _process(delta: float) -> void:
 	var weapon_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
 	if not is_on_floor():
-		velocity.y += _gravity * delta
-		 # velocity.x += _gravity * delta # vento
-	#else:
-	#	_is_double_jump = false
+		if(slow_fall_power_up):
+			velocity.y += _gravity * delta / 3
+			if(velocity.y <= 0):
+				velocity.y += _gravity * delta / 2
+		else:
+			velocity.y += _gravity * delta
+	
 	var input: float = Input.get_axis("ui_left", "ui_right")
+	
 	if Input.is_action_just_pressed("jump"):
 		jump_time = Time.get_ticks_msec()
+		if(is_on_floor()):
+			jump_power_bar.visible = true  
+		
+		if(not is_on_floor() and (not _is_double_jump and double_jump_power_up)):
+			velocity.y = JUMP_VELOCITY * 0.5
+			velocity.x = input * JUMP_VELOCITY_MIN * 0.5 * -1
+			_is_double_jump = true
+	
+	if Input.is_action_pressed("jump"):
+		var time_now = Time.get_ticks_msec() - jump_time
+		var jump_force = min(time_now, MAX_JUMP_HOLD) / MAX_JUMP_HOLD * MAX_JUMP_FORCE
+		if(is_on_floor()):
+			jump_power_bar.visible = true
+		if jump_power_bar:
+			jump_power_bar.value = jump_force / MAX_JUMP_FORCE * 100.0
+		
+		print("Força do pulo: ", jump_force)
+		
 	if Input.is_action_just_released("jump"):
-		if is_on_floor() or (not _is_double_jump and double_jump_power_up):
+		if jump_power_bar:
+			jump_power_bar.value = 0  
+			jump_power_bar.visible = false  
+		
+		if is_on_floor():
 			var time_now = Time.get_ticks_msec() - jump_time
-			var jump_force = min(time_now, MAX_JUMP_HOLD)
-			if(not is_on_floor() and jump_force > MAX_JUMP_HOLD):
-				jump_force = MAX_JUMP_HOLD 
-			jump_force = jump_force/MAX_JUMP_HOLD
+			var jump_force = min(time_now, MAX_JUMP_HOLD) / MAX_JUMP_HOLD * MAX_JUMP_FORCE
+
+			velocity.y = JUMP_VELOCITY * jump_force
+			velocity.x = input * JUMP_VELOCITY_MIN * jump_force * -1
+
+			_is_double_jump = false
+			jump_sfx.play()
 	
-			if jump_force >= 0.7:
-				jump_force = 0.7
-			print(jump_force)
-			if(is_on_floor()):
-				velocity.y = JUMP_VELOCITY * jump_force
-				velocity.x = input * JUMP_VELOCITY_MIN * jump_force * -1
-			else:
-				velocity.y = JUMP_VELOCITY * 0.5
-				velocity.x = input * JUMP_VELOCITY_MIN * jump_force * -1
-			
-			print(jump_force)
-			if not is_on_floor():
-				_is_double_jump = true
-			else:
-				_is_double_jump = false
-	elif Input.is_action_just_released("jump"):
-		if velocity.y < JUMP_VELOCITY_MIN:
-			velocity.y = JUMP_VELOCITY_MIN
-	
-	
-	#var input: float = Input.get_axis("ui_left", "ui_right")
 	if input:
-			#velocity.x = input * SPEED
 		if is_on_floor():
 			velocity.x = move_toward(velocity.x, 0 * SPEED, ACCELERATION * delta)
 			_direction = sign(input)
 		else:
-			#print(input)
-			if(velocity.y <= 0):
+			if velocity.y <= 0:
 				velocity.x = move_toward(velocity.x, input * 250, ACCELERATION * delta * 2)
-			
 			_direction = sign(input)
 	else:
 		velocity.x = move_toward(velocity.x, 0, FRICTION * delta)
@@ -81,7 +94,6 @@ func _process(delta: float) -> void:
 	
 	move_and_slide()
 	_animate_player()
-
 
 func _animate_player():
 	if is_on_floor():
@@ -96,7 +108,6 @@ func _animate_player():
 			_animated_sprite.play("fall")
 
 	_animated_sprite.scale.x = _direction
-
 
 @warning_ignore("unused_parameter")
 func _on_area_2d_body_entered(body: Node2D) -> void:
