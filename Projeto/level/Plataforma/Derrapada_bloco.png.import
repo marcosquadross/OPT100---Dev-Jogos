@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsapbygxihv3a"
-path="res://.godot/imported/fundo.jpg-731fefdbdc4cbf012b90c3b9c51fb67e.ctex"
+uid="uid://dnhxgovsnib3a"
+path="res://.godot/imported/Derrapada_bloco.png-0ff27ce3e52418e505e7fce55ac36ac3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level/fundo.jpg"
-dest_files=["res://.godot/imported/fundo.jpg-731fefdbdc4cbf012b90c3b9c51fb67e.ctex"]
+source_file="res://level/Plataforma/Derrapada_bloco.png"
+dest_files=["res://.godot/imported/Derrapada_bloco.png-0ff27ce3e52418e505e7fce55ac36ac3.ctex"]
 
 [params]
 

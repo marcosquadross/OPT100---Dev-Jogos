@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r15k44xnvsts"
-path="res://.godot/imported/Fundo_Instrucao.png-afab8362a6364e2ae40d1c37c49536fc.ctex"
+uid="uid://qlthfo6aux3o"
+path="res://.godot/imported/City_Block_Broken.png-a052e7dfeea062acabd19d300950acff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level/Fundo_Instrucao.png"
-dest_files=["res://.godot/imported/Fundo_Instrucao.png-afab8362a6364e2ae40d1c37c49536fc.ctex"]
+source_file="res://level/Plataforma/City_Block_Broken.png"
+dest_files=["res://.godot/imported/City_Block_Broken.png-a052e7dfeea062acabd19d300950acff.ctex"]
 
 [params]
 

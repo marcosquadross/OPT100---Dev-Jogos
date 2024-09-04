@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsapbygxihv3a"
-path="res://.godot/imported/fundo.jpg-731fefdbdc4cbf012b90c3b9c51fb67e.ctex"
+uid="uid://c10pyln1acwt3"
+path="res://.godot/imported/Bloco_Quebrando.png-4e7de5a07b6e366e2c25bc687548f350.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level/fundo.jpg"
-dest_files=["res://.godot/imported/fundo.jpg-731fefdbdc4cbf012b90c3b9c51fb67e.ctex"]
+source_file="res://level/Plataforma/Bloco_Quebrando.png"
+dest_files=["res://.godot/imported/Bloco_Quebrando.png-4e7de5a07b6e366e2c25bc687548f350.ctex"]
 
 [params]
 

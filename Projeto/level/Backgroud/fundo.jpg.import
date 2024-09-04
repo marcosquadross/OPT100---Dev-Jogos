@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dr7ww24e8oeab"
-path="res://.godot/imported/City_Block.png-a7631ffd8d49b00f3a6267f667b8e863.ctex"
+uid="uid://cog172fcack7c"
+path="res://.godot/imported/fundo.jpg-731fefdbdc4cbf012b90c3b9c51fb67e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level/City_Block.png"
-dest_files=["res://.godot/imported/City_Block.png-a7631ffd8d49b00f3a6267f667b8e863.ctex"]
+source_file="res://level/fundo.jpg"
+dest_files=["res://.godot/imported/fundo.jpg-731fefdbdc4cbf012b90c3b9c51fb67e.ctex"]
 
 [params]
 

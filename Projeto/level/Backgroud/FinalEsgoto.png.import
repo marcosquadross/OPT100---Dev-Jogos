@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsapbygxihv3a"
-path="res://.godot/imported/fundo.jpg-731fefdbdc4cbf012b90c3b9c51fb67e.ctex"
+uid="uid://b8d618ccer3mp"
+path="res://.godot/imported/FinalEsgoto.png-6075b9076db39ebb3c9670884fd725fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level/fundo.jpg"
-dest_files=["res://.godot/imported/fundo.jpg-731fefdbdc4cbf012b90c3b9c51fb67e.ctex"]
+source_file="res://level/Backgroud/FinalEsgoto.png"
+dest_files=["res://.godot/imported/FinalEsgoto.png-6075b9076db39ebb3c9670884fd725fa.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bssk7tadk7hic"
-path="res://.godot/imported/Musgo_block.png-b33318ab7cce95999dd693486fa57665.ctex"
+uid="uid://gjqumuq6txsv"
+path="res://.godot/imported/Fundo2.0.png-81106e9a8b680f871baf67902e90213d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level/Musgo_block.png"
-dest_files=["res://.godot/imported/Musgo_block.png-b33318ab7cce95999dd693486fa57665.ctex"]
+source_file="res://level/Backgroud/Fundo2.0.png"
+dest_files=["res://.godot/imported/Fundo2.0.png-81106e9a8b680f871baf67902e90213d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3fq1lil33tjn"
-path="res://.godot/imported/Bloco_Normal.png-c8a86918b7f7d6bd273100dcc3c3df1f.ctex"
+uid="uid://p5n8vnhvikjs"
+path="res://.godot/imported/Fundo_1.1.png-30da78f6ff9826ce7955860dc129ecc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level/Bloco_Normal.png"
-dest_files=["res://.godot/imported/Bloco_Normal.png-c8a86918b7f7d6bd273100dcc3c3df1f.ctex"]
+source_file="res://level/Backgroud/Fundo_1.1.png"
+dest_files=["res://.godot/imported/Fundo_1.1.png-30da78f6ff9826ce7955860dc129ecc9.ctex"]
 
 [params]
 

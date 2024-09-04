@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsapbygxihv3a"
-path="res://.godot/imported/fundo.jpg-731fefdbdc4cbf012b90c3b9c51fb67e.ctex"
+uid="uid://cv7ot41wh0fda"
+path="res://.godot/imported/JanelaBordaCompleta.png-f501b55f9abc5e9717ca733c8e140446.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level/fundo.jpg"
-dest_files=["res://.godot/imported/fundo.jpg-731fefdbdc4cbf012b90c3b9c51fb67e.ctex"]
+source_file="res://janela/JanelaBordaCompleta.png"
+dest_files=["res://.godot/imported/JanelaBordaCompleta.png-f501b55f9abc5e9717ca733c8e140446.ctex"]
 
 [params]
 

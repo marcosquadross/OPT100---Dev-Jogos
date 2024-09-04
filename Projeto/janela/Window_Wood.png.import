@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsapbygxihv3a"
-path="res://.godot/imported/fundo.jpg-731fefdbdc4cbf012b90c3b9c51fb67e.ctex"
+uid="uid://ddlmwd2n7bbt6"
+path="res://.godot/imported/Window_Wood.png-700399a06679c17b31003ce8e98da3bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level/fundo.jpg"
-dest_files=["res://.godot/imported/fundo.jpg-731fefdbdc4cbf012b90c3b9c51fb67e.ctex"]
+source_file="res://janela/Window_Wood.png"
+dest_files=["res://.godot/imported/Window_Wood.png-700399a06679c17b31003ce8e98da3bb.ctex"]
 
 [params]
 
