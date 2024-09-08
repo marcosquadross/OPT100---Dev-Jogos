@@ -8,7 +8,6 @@ func _ready() -> void:
 
 
 func _get_map_bounds(tilemap: TileMap) -> Rect2:
-	# obtem o retangulo do mapa em celulas
 	var map_rect: Rect2 = tilemap.get_used_rect()
 	var cell_size: float = tilemap.tile_set.tile_size.x * tilemap.scale.x
 	

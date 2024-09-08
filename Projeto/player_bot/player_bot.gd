@@ -12,7 +12,7 @@ const MAX_JUMP_FORCE: float = 0.7
 
 @onready var _animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var jump_sfx = $JumpSFX as AudioStreamPlayer
-@onready var jump_power_bar: ProgressBar = get_node("/root/World/CanvasLayerBar/ProgressBar")
+@onready var jump_power_bar: ProgressBar = get_node("/root/World/PlayerBot/ProgressBar")
 
 var jump_time: float = 0
 var _gravity = 980 * 2
@@ -31,7 +31,7 @@ func _ready():
 		jump_power_bar.visible = false 
 
 func _process(delta: float) -> void:
-	var weapon_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	#var weapon_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
 	if not is_on_floor():
 		if(slow_fall_power_up):
@@ -61,7 +61,7 @@ func _process(delta: float) -> void:
 		if jump_power_bar:
 			jump_power_bar.value = jump_force / MAX_JUMP_FORCE * 100.0
 		
-		print("Força do pulo: ", jump_force)
+		#print("Força do pulo: ", jump_force)
 		
 	if Input.is_action_just_released("jump"):
 		if jump_power_bar:
@@ -94,6 +94,12 @@ func _process(delta: float) -> void:
 	
 	move_and_slide()
 	_animate_player()
+	
+	for platforms in get_slide_collision_count():
+		var collision = get_slide_collision(platforms)
+		if collision.get_collider().has_method("has_collided_with"):
+			collision.get_collider().has_collided_with(self)    
+							  
 
 func _animate_player():
 	if is_on_floor():
