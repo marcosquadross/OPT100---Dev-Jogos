@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://b03m5vl1h1paw"]
 
-[ext_resource type="Script" path="res://level/Plataforma/broken_plataform/broken_plataform.gd" id="1_7oj0s"]
-[ext_resource type="Texture2D" uid="uid://di20kv76s4vgt" path="res://level/Plataforma/broken_plataform/Block.png" id="2_mawye"]
-[ext_resource type="Texture2D" uid="uid://du7ofqqodq6m2" path="res://level/Plataforma/broken_plataform/pixil-frame.png" id="2_okxld"]
+[ext_resource type="Script" path="res://level/Plataforma/broken_block/broken_block.gd" id="1_7oj0s"]
+[ext_resource type="Texture2D" uid="uid://di20kv76s4vgt" path="res://level/Plataforma/broken_block/Block.png" id="2_mawye"]
+[ext_resource type="Texture2D" uid="uid://du7ofqqodq6m2" path="res://level/Plataforma/broken_block/pixil-frame.png" id="2_okxld"]
 
 [sub_resource type="Animation" id="Animation_5k2ye"]
 length = 0.001

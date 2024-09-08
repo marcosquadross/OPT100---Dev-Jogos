@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://5cy1eid1hlsq"]
 
-[ext_resource type="Script" path="res://level/Plataforma/city_plataform/broken_city_plataform.gd" id="1_arn36"]
-[ext_resource type="Texture2D" uid="uid://b7veapkofa3ap" path="res://level/Plataforma/city_plataform/Block.png" id="2_5agfb"]
-[ext_resource type="Texture2D" uid="uid://dp6yrai66v641" path="res://level/Plataforma/city_plataform/pixil_frame_city.png" id="3_f26lk"]
+[ext_resource type="Script" path="res://level/Plataforma/city_block/broken_city_block.gd" id="1_arn36"]
+[ext_resource type="Texture2D" uid="uid://b7veapkofa3ap" path="res://level/Plataforma/city_block/Block.png" id="2_5agfb"]
+[ext_resource type="Texture2D" uid="uid://dp6yrai66v641" path="res://level/Plataforma/city_block/pixil_frame_city.png" id="3_f26lk"]
 
 [sub_resource type="Animation" id="Animation_n84vo"]
 length = 0.001

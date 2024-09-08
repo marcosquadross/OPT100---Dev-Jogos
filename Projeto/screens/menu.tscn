@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cm4fotn0thrt"]
+[gd_scene load_steps=3 format=3 uid="uid://cm4fotn0thrt"]
 
 [ext_resource type="Script" path="res://screens/menu.gd" id="1_f18a8"]
-[ext_resource type="Texture2D" uid="uid://bpcboupjmfvei" path="res://level/Fundo2.0.png" id="2_5pipd"]
 [ext_resource type="FontFile" uid="uid://bejpc4j7ug61j" path="res://assets/PublicPixel.ttf" id="2_b6p6n"]
 
 [node name="Menu" type="Control"]
@@ -30,7 +29,6 @@ layout_mode = 2
 offset_right = 576.0
 offset_bottom = 310.0
 scale = Vector2(0.998758, 0.5603)
-texture = ExtResource("2_5pipd")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -93,6 +91,9 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_b6p6n")
 theme_override_font_sizes/font_size = 24
 text = "Sair"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
 
 [connection signal="pressed" from="MarginContainer/MainContainer/HBoxContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/HBoxContainer/VBoxContainer/instructionsButton" to="." method="_on_instructions_button_pressed"]

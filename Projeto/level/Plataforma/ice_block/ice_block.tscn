@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bu7d8wocathmn"]
 
 [ext_resource type="Script" path="res://level/Plataforma/ice_block/ice_block.gd" id="1_qwtfp"]
-[ext_resource type="Texture2D" uid="uid://d3kyypeeakykj" path="res://level/Plataforma/ice_block/Iced_Bloco.png" id="1_ybnof"]
+[ext_resource type="Texture2D" uid="uid://cmvhgxhnw2j60" path="res://level/Plataforma/ice_block/Iced_Bloco.png" id="1_ybnof"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ogflb"]
 size = Vector2(32, 32)
@@ -13,5 +13,4 @@ script = ExtResource("1_qwtfp")
 texture = ExtResource("1_ybnof")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("RectangleShape2D_ogflb")
