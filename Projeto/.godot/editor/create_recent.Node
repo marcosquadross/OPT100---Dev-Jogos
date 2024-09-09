@@ -12,4 +12,3 @@ AnimationPlayer
 AudioStreamPlayer
 Timer
 Label
-CollisionShape2D

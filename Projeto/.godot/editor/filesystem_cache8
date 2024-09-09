@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1725912955
+::res://::1725913029
 camera_utils.gd::GDScript::-1::1725902458::0::1::::CameraUtils<>Camera2D<>::
 game_controller.gd::GDScript::-1::1725902458::0::1::::Gamecontroller<>Node<>::
 game_init.gd::GDScript::-1::1725912236::0::1::::GameInit<>Node2D<>::
@@ -54,13 +54,13 @@ JanelaBordaEB.png::CompressedTexture2D::1619133122116514740::1725902468::1725903
 JanelaBordaEC.png::CompressedTexture2D::7054185213209059594::1725902468::1725903256::1::::<><>::
 JanelaSemBorda.png::CompressedTexture2D::4842449618059505033::1725902468::1725903256::1::::<><>::
 Window_Wood.png::CompressedTexture2D::7393304828580397201::1725902468::1725903256::1::::<><>::
-::res://level/::1725912769
+::res://level/::1725912962
 block.png::CompressedTexture2D::645028605232248710::1725902458::1725902468::1::::<><>::
 block_slope.png::CompressedTexture2D::8377098606561706645::1725902458::1725902458::1::::<><>::
 foreground_stars.png::CompressedTexture2D::2408540247707860905::1725902458::1725902458::1::::<><>::
 fundo.jpg::CompressedTexture2D::3650733680748321572::1725902458::1725902468::1::::<><>::
 level1.tscn::PackedScene::2109320603939109015::1725912607::0::1::::<><>::res://game_init.gd<>res://hud/label_fps.gd<>res://hud/label_items.gd<>uid://p5n8vnhvikjs::::res://level/Backgroud/Fundo_1.1.png<>uid://bcgsm88544px4::::res://player_bot/player_bot.tscn<>res://level/outline.gdshader<>res://fx/camera_shake.gd<>uid://cqp577mxrmdda::::res://level/tiles1.png<>uid://cnkv48fpubd8e::::res://checkpoint/checkpoint.tscn<>uid://ybilt8xnf4t4::::res://item/item.tscn<>uid://3fq1lil33tjn::::res://level/Plataforma/Bloco_Normal.png<>uid://bssk7tadk7hic::::res://level/Plataforma/Musgo_block.png<>uid://ba7xshm3cware::::res://item/item.png<>uid://b03m5vl1h1paw::::res://level/Plataforma/broken_block/broken_block.tscn<>uid://5cy1eid1hlsq::::res://level/Plataforma/city_block/broken_city_block.tscn<>uid://ct67etgy6graa::::res://level_exit/level_end.tscn<>uid://bu7d8wocathmn::::res://level/Plataforma/ice_block/ice_block.tscn<>uid://ggy8y37lwo3p::::res://sounds/happy_adveture.mp3<>uid://dv4xtgd7tcnbo::::res://level/Backgroud/Fundo_1.0.png<>uid://b8d618ccer3mp::::res://level/Backgroud/FinalEsgoto.png
-outline.gdshader::Shader::-1::1725912769::0::1::::<><>::
+outline.gdshader::Shader::-1::1725912962::0::1::::<><>::
 tiles1.png::CompressedTexture2D::5928708887446632770::1725902458::1725902458::1::::<><>::
 ::res://level/Backgroud/::1725912236
 background_stars.png::CompressedTexture2D::7912377130245922431::1725902468::1725903256::1::::<><>::
