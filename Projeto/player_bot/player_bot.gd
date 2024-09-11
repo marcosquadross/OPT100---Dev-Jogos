@@ -22,6 +22,7 @@ var _start_posisition: Vector2
 var _last_checkpoint = 1
 var double_jump_power_up: bool = false
 var slow_fall_power_up: bool = false
+var is_shocked: bool = false
 
 func _ready():
 	_start_posisition = position
@@ -29,10 +30,10 @@ func _ready():
 		print("Erro: ProgressBar não encontrado.")
 	else:
 		jump_power_bar.visible = false 
+		
+		
 
 func _process(delta: float) -> void:
-	#var weapon_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	
 	if not is_on_floor():
 		if(slow_fall_power_up):
 			velocity.y += _gravity * delta / 3
@@ -102,7 +103,9 @@ func _process(delta: float) -> void:
 							  
 
 func _animate_player():
-	if is_on_floor():
+	if is_shocked == true:
+		_animated_sprite.play("shock")
+	elif is_on_floor():
 		if velocity.x != 0:
 			_animated_sprite.play("run")
 		else:

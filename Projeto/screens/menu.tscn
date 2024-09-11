@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cm4fotn0thrt"]
+[gd_scene load_steps=5 format=3 uid="uid://cm4fotn0thrt"]
 
 [ext_resource type="Script" path="res://screens/menu.gd" id="1_f18a8"]
 [ext_resource type="FontFile" uid="uid://bejpc4j7ug61j" path="res://assets/PublicPixel.ttf" id="2_b6p6n"]
+[ext_resource type="Texture2D" uid="uid://gjqumuq6txsv" path="res://level/backgrounds/Fundo2.0.png" id="2_ldinp"]
+[ext_resource type="AudioStream" uid="uid://ggy8y37lwo3p" path="res://sounds/happy_adveture.mp3" id="4_s0gqt"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -15,7 +17,6 @@ grow_vertical = 2
 script = ExtResource("1_f18a8")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,6 +30,7 @@ layout_mode = 2
 offset_right = 576.0
 offset_bottom = 310.0
 scale = Vector2(0.998758, 0.5603)
+texture = ExtResource("2_ldinp")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -92,8 +94,9 @@ theme_override_fonts/font = ExtResource("2_b6p6n")
 theme_override_font_sizes/font_size = 24
 text = "Sair"
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
-layout_mode = 2
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_s0gqt")
+volume_db = -15.0
 
 [connection signal="pressed" from="MarginContainer/MainContainer/HBoxContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/HBoxContainer/VBoxContainer/instructionsButton" to="." method="_on_instructions_button_pressed"]

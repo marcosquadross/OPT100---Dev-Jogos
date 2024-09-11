@@ -11,7 +11,6 @@ func _ready() -> void:
 	_player.seek( (_player.current_animation_length / 10) * offset)
 	
 
-
 func get_value() -> int:
 	return value
 
