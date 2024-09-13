@@ -99,6 +99,7 @@ jump={
 2d_physics/layer_5="Item"
 2d_physics/layer_6="Checkpoint"
 2d_physics/layer_7="Missle"
+2d_physics/layer_8="Window"
 
 [rendering]
 

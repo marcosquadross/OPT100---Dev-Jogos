@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cv7ot41wh0fda"
-path="res://.godot/imported/JanelaBordaCompleta.png-f501b55f9abc5e9717ca733c8e140446.ctex"
+path="res://.godot/imported/JanelaBordaCompleta.png-9658a4517c98d6d8666bdd330bbf22f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://janela/JanelaBordaCompleta.png"
-dest_files=["res://.godot/imported/JanelaBordaCompleta.png-f501b55f9abc5e9717ca733c8e140446.ctex"]
+source_file="res://window/JanelaBordaCompleta.png"
+dest_files=["res://.godot/imported/JanelaBordaCompleta.png-9658a4517c98d6d8666bdd330bbf22f6.ctex"]
 
 [params]
 

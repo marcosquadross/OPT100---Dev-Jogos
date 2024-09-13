@@ -10,11 +10,12 @@ func _ready():
 func has_collided_with(collider: CharacterBody2D):
 	if collider.is_in_group("Player"):
 		player_velocity = collider.velocity
-
+	
 		if collider.scale.x > 0:
-			player_velocity.x = slide_factor 
-		else:
+		#if collider.global_position.x < global_position.x:
 			player_velocity.x = -slide_factor  
+		else:
+			player_velocity.x = slide_factor 
 		animated_sprite.play("idle")
 		collider.velocity = player_velocity
  

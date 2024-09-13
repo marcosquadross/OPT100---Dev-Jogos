@@ -5,7 +5,6 @@ class_name Item
 
 @export var value: int = 5
 
-# create an animation offset by x global_position
 func _ready() -> void:
 	var offset: int = int(global_position.x) % 10
 	_player.seek( (_player.current_animation_length / 10) * offset)
@@ -16,4 +15,4 @@ func get_value() -> int:
 
 
 func _on_collision_shape_2d_ready() -> void:
-	pass # Replace with function body.
+	pass 

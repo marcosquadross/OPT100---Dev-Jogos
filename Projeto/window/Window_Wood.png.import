@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7xjqs2xqicoa"
-path="res://.godot/imported/Fechadura.png-8864209b925cebb69babd99186cc4ed2.ctex"
+uid="uid://ddlmwd2n7bbt6"
+path="res://.godot/imported/Window_Wood.png-4bcda4df21569bec7cf74547deb1107a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://janela/Fechadura.png"
-dest_files=["res://.godot/imported/Fechadura.png-8864209b925cebb69babd99186cc4ed2.ctex"]
+source_file="res://window/Window_Wood.png"
+dest_files=["res://.godot/imported/Window_Wood.png-4bcda4df21569bec7cf74547deb1107a.ctex"]
 
 [params]
 

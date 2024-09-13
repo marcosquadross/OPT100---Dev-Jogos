@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddlmwd2n7bbt6"
-path="res://.godot/imported/Window_Wood.png-700399a06679c17b31003ce8e98da3bb.ctex"
+uid="uid://xck5ef5gisga"
+path="res://.godot/imported/JanelaBordaEB.png-bc5645bcca4c834d27104f3d50df7965.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://janela/Window_Wood.png"
-dest_files=["res://.godot/imported/Window_Wood.png-700399a06679c17b31003ce8e98da3bb.ctex"]
+source_file="res://window/JanelaBordaEB.png"
+dest_files=["res://.godot/imported/JanelaBordaEB.png-bc5645bcca4c834d27104f3d50df7965.ctex"]
 
 [params]
 

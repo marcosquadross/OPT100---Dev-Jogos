@@ -23,6 +23,7 @@ var _last_checkpoint = 1
 var double_jump_power_up: bool = false
 var slow_fall_power_up: bool = false
 var is_shocked: bool = false
+var has_key: bool = false
 
 func _ready():
 	_start_posisition = position
@@ -30,8 +31,6 @@ func _ready():
 		print("Erro: ProgressBar não encontrado.")
 	else:
 		jump_power_bar.visible = false 
-		
-		
 
 func _process(delta: float) -> void:
 	if not is_on_floor():
@@ -100,7 +99,7 @@ func _process(delta: float) -> void:
 		var collision = get_slide_collision(platforms)
 		if collision.get_collider().has_method("has_collided_with"):
 			collision.get_collider().has_collided_with(self)    
-							  
+  
 
 func _animate_player():
 	if is_shocked == true:
@@ -118,12 +117,3 @@ func _animate_player():
 
 	_animated_sprite.scale.x = _direction
 
-@warning_ignore("unused_parameter")
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Checkpoint"):
-		if _last_checkpoint != null:
-			_last_checkpoint._deactivate()
-		body._activate()
-		_start_posisition = body.position
-	else:
-		position = _start_posisition
