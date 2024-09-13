@@ -20,6 +20,7 @@ func _on_instructions_button_pressed():
 
 
 func _on_credits_button_pressed():
+	get_tree().change_scene_to_file("res://screens/credits.tscn")
 	pass # Replace with function body.
 
 

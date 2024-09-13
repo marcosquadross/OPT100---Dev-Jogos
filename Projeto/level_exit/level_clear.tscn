@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://df8njuitayk5m"]
+[gd_scene load_steps=3 format=3 uid="uid://df8njuitayk5m"]
 
 [ext_resource type="Script" path="res://level_exit/level_clear.gd" id="1_35a0w"]
+[ext_resource type="FontFile" uid="uid://bejpc4j7ug61j" path="res://assets/PublicPixel.ttf" id="2_26n7i"]
 
 [node name="LevelClear" type="Node2D"]
 script = ExtResource("1_35a0w")
@@ -22,3 +23,14 @@ offset_bottom = 322.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Score: 0000"
+
+[node name="StartButton" type="Button" parent="." groups=["button"]]
+offset_left = 368.0
+offset_top = 352.0
+offset_right = 688.0
+offset_bottom = 384.0
+theme_override_fonts/font = ExtResource("2_26n7i")
+theme_override_font_sizes/font_size = 24
+text = "Próximo Nível"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
