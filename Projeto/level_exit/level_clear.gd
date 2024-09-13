@@ -8,3 +8,7 @@ func _ready():
 func _on_start_button_pressed():
 	get_tree().change_scene_to_file("res://level/credits.tscn");
 	#get_tree().call_deferred("change_scene_to_file", "res://level_exit/level_clear.tscn")
+
+func _on_menu_button_pressed():
+	get_tree().change_scene_to_file("res://level/menu.tscn");
+	#get_tree().call_deferred("change_scene_to_file", "res://level_exit/level_clear.tscn")
