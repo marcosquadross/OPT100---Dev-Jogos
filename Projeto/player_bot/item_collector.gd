@@ -16,6 +16,6 @@ func _on_area_entered(item) -> void:
 		player.has_key = true
 		item.get_key()
 	else:
-		#item.has_collided()	
+		item.has_collided()	
 		print("Here")
 

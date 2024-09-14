@@ -14,6 +14,7 @@ const MAX_JUMP_FORCE: float = 0.7
 @onready var jump_sfx = $JumpSFX as AudioStreamPlayer
 @onready var jump_power_bar: ProgressBar = get_node("/root/World/PlayerBot/ProgressBar")
 
+const DEBUG: bool = true
 var jump_time: float = 0
 var _gravity = 980 * 2
 var _direction = 1
@@ -34,7 +35,7 @@ func _ready():
 
 func _process(delta: float) -> void:
 	if not is_on_floor():
-		if(slow_fall_power_up):
+		if(slow_fall_power_up or DEBUG):
 			velocity.y += _gravity * delta / 3
 			if(velocity.y <= 0):
 				velocity.y += _gravity * delta / 2
@@ -48,7 +49,7 @@ func _process(delta: float) -> void:
 		if(is_on_floor()):
 			jump_power_bar.visible = true  
 		
-		if(not is_on_floor() and (not _is_double_jump and double_jump_power_up)):
+		if(not is_on_floor() and ((not _is_double_jump and double_jump_power_up) or DEBUG)):
 			velocity.y = JUMP_VELOCITY * 0.5
 			velocity.x = input * JUMP_VELOCITY_MIN * 0.5 * -1
 			_is_double_jump = true

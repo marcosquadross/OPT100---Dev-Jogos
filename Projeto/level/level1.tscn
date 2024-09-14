@@ -513,3 +513,15 @@ position = Vector2(144, -2688)
 [node name="LevelEnd10" parent="." instance=ExtResource("12_qnnun")]
 visible = false
 position = Vector2(64, -2688)
+
+[connection signal="body_entered" from="LevelEnd" to="." method="_on_body_entered_lvl1"]
+[connection signal="body_entered" from="LevelEnd2" to="." method="_on_body_entered_lvl1"]
+[connection signal="body_entered" from="LevelEnd3" to="." method="_on_body_entered_lvl1"]
+[connection signal="body_entered" from="LevelEnd4" to="." method="_on_body_entered_lvl1"]
+[connection signal="body_entered" from="LevelEnd5" to="." method="_on_body_entered_lvl1"]
+[connection signal="body_entered" from="LevelEnd6" to="." method="_on_body_entered_lvl1"]
+[connection signal="body_entered" from="LevelEnd7" to="." method="_on_body_entered_lvl1"]
+[connection signal="body_entered" from="LevelEnd7/LevelEnd2" to="." method="_on_body_entered_lvl1"]
+[connection signal="body_entered" from="LevelEnd8" to="." method="_on_body_entered_lvl1"]
+[connection signal="body_entered" from="LevelEnd9" to="." method="_on_body_entered_lvl1"]
+[connection signal="body_entered" from="LevelEnd10" to="." method="_on_body_entered_lvl1"]
