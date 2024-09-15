@@ -11,7 +11,7 @@ const DOUBLE_JUMP_FORCE: int = 500
 const MAX_JUMP_FORCE: float = 0.7 
 
 @onready var _animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var jump_sfx = $JumpSFX as AudioStreamPlayer
+@onready var jump_sfx: AudioStreamPlayer = $JumpSFX 
 @onready var jump_power_bar: ProgressBar = get_node("/root/World/PlayerBot/ProgressBar")
 
 const DEBUG: bool = true

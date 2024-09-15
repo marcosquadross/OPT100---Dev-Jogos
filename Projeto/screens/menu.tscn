@@ -3,7 +3,13 @@
 [ext_resource type="Script" path="res://screens/menu.gd" id="1_f18a8"]
 [ext_resource type="FontFile" uid="uid://bejpc4j7ug61j" path="res://assets/PublicPixel.ttf" id="2_b6p6n"]
 [ext_resource type="Texture2D" uid="uid://gjqumuq6txsv" path="res://level/backgrounds/Fundo2.0.png" id="2_ldinp"]
-[ext_resource type="AudioStream" uid="uid://ggy8y37lwo3p" path="res://sounds/happy_adveture.mp3" id="4_s0gqt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1hc1d"]
+content_margin_left = 30.0
+content_margin_bottom = 10.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+shadow_color = Color(0, 0, 0, 0.431373)
+shadow_size = 1
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -39,20 +45,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_top = 20
+theme_override_constants/margin_top = 60
 theme_override_constants/margin_bottom = 20
 
 [node name="MainContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/separation = 150
+theme_override_constants/separation = 100
 alignment = 1
 
 [node name="GameName" type="Label" parent="MarginContainer/MainContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_b6p6n")
 theme_override_font_sizes/font_size = 72
+theme_override_styles/normal = SubResource("StyleBoxFlat_1hc1d")
 text = "Cat King"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -73,7 +80,7 @@ theme_override_fonts/font = ExtResource("2_b6p6n")
 theme_override_font_sizes/font_size = 24
 text = "Iniciar"
 
-[node name="instructionsButton" type="Button" parent="MarginContainer/MainContainer/HBoxContainer/VBoxContainer" groups=["button"]]
+[node name="instructionsButton2" type="Button" parent="MarginContainer/MainContainer/HBoxContainer/VBoxContainer" groups=["button"]]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_b6p6n")
 theme_override_font_sizes/font_size = 24
@@ -81,12 +88,11 @@ text = "Instruções
 "
 
 [node name="CreditsButton" type="Button" parent="MarginContainer/MainContainer/HBoxContainer/VBoxContainer" groups=["button"]]
-visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_b6p6n")
 theme_override_font_sizes/font_size = 24
-text = "Créditos"
-flat = true
+text = "Creditos
+"
 
 [node name="QuitButton" type="Button" parent="MarginContainer/MainContainer/HBoxContainer/VBoxContainer" groups=["button"]]
 layout_mode = 2
@@ -94,11 +100,7 @@ theme_override_fonts/font = ExtResource("2_b6p6n")
 theme_override_font_sizes/font_size = 24
 text = "Sair"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_s0gqt")
-volume_db = -15.0
-
 [connection signal="pressed" from="MarginContainer/MainContainer/HBoxContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="MarginContainer/MainContainer/HBoxContainer/VBoxContainer/instructionsButton" to="." method="_on_instructions_button_pressed"]
+[connection signal="pressed" from="MarginContainer/MainContainer/HBoxContainer/VBoxContainer/instructionsButton2" to="." method="_on_instructions_button_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/HBoxContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/HBoxContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

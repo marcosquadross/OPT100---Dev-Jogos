@@ -5,6 +5,7 @@ class_name GameInit
 
 func _ready() -> void:
 	_camera.init_camera_limits(_get_map_bounds($TileMap))
+	music.stop_music()
 
 
 func _get_map_bounds(tilemap: TileMap) -> Rect2:

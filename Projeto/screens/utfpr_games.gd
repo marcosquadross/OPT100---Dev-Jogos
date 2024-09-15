@@ -7,3 +7,4 @@ func _ready():
 
 func _on_timer_timeout():
 	get_tree().change_scene_to_file("res://screens/menu.tscn")
+	music.play_music()
