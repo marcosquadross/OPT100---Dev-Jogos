@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0o3taco2s7hg"
-path="res://.godot/imported/TelaFinal.png-2c5bd37a5e611dcea55ce15d1c80519b.ctex"
+uid="uid://p0uvyo2y4r11"
+path="res://.godot/imported/Nuvem.png-2163f73b7934126c4251f2d5b6f18442.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level/backgrounds/TelaFinal.png"
-dest_files=["res://.godot/imported/TelaFinal.png-2c5bd37a5e611dcea55ce15d1c80519b.ctex"]
+source_file="res://level/plataforms/Nuvem.png"
+dest_files=["res://.godot/imported/Nuvem.png-2163f73b7934126c4251f2d5b6f18442.ctex"]
 
 [params]
 
