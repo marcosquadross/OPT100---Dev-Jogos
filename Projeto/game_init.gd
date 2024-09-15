@@ -41,4 +41,8 @@ func _on_body_entered_lvl4(_body):
 func _on_body_entered_lvl5(_body):
 	# load next level
 	#get_tree().change_scene_to_file("res://level/level2.tscn");
+	get_tree().change_scene_to_file("res://level/level6.tscn");
+
+
+func _on_body_entered_lvl6(body):
 	get_tree().call_deferred("change_scene_to_file", "res://level_exit/level_clear.tscn")

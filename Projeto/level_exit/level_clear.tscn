@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://df8njuitayk5m"]
+[gd_scene load_steps=3 format=3 uid="uid://df8njuitayk5m"]
 
 [ext_resource type="Script" path="res://level_exit/level_clear.gd" id="1_35a0w"]
+[ext_resource type="Texture2D" uid="uid://b0o3taco2s7hg" path="res://level/backgrounds/TelaFinal.png" id="2_f76r6"]
 
 [node name="LevelClear" type="Node2D"]
 script = ExtResource("1_35a0w")
@@ -22,3 +23,8 @@ offset_bottom = 322.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Score: 0000"
+
+[node name="TelaFinal" type="Sprite2D" parent="."]
+position = Vector2(512, 288)
+scale = Vector2(1, 0.5625)
+texture = ExtResource("2_f76r6")
