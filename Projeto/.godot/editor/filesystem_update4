@@ -8,3 +8,7 @@ res://screens/menu.tscn
 res://level/level1.tscn
 res://level/level4.tscn
 res://level/level5.tscn
+res://game_init.gd
+res://level/plataforms/broken_block/broken_block.gd
+res://item/key.gd
+res://player_bot/player_bot.gd

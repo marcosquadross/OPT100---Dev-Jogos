@@ -18,27 +18,27 @@ func _get_map_bounds(tilemap: TileMap) -> Rect2:
 	return Rect2(pos, size)
 
 
-func _on_body_entered_lvl1(body):
+func _on_body_entered_lvl1(_body):
 	# load next level
 	get_tree().change_scene_to_file("res://level/level2.tscn");
 	# get_tree().call_deferred("change_scene_to_file", "res://level_exit/level_clear.tscn")
 
-func _on_body_entered_lvl2(body):
+func _on_body_entered_lvl2(_body):
 	# load next level
 	get_tree().change_scene_to_file("res://level/level3.tscn");
 	# get_tree().call_deferred("change_scene_to_file", "res://level_exit/level_clear.tscn")
 	
-func _on_body_entered_lvl3(body):
+func _on_body_entered_lvl3(_body):
 	# load next level
 	get_tree().change_scene_to_file("res://level/level4.tscn");
 	# get_tree().call_deferred("change_scene_to_file", "res://level_exit/level_clear.tscn")
 	
-func _on_body_entered_lvl4(body):
+func _on_body_entered_lvl4(_body):
 	# load next level
 	get_tree().change_scene_to_file("res://level/level5.tscn");
 	# get_tree().call_deferred("change_scene_to_file", "res://level_exit/level_clear.tscn")
 	
-func _on_body_entered_lvl5(body):
+func _on_body_entered_lvl5(_body):
 	# load next level
 	#get_tree().change_scene_to_file("res://level/level2.tscn");
 	get_tree().call_deferred("change_scene_to_file", "res://level_exit/level_clear.tscn")

@@ -5,7 +5,7 @@ class_name KeyItem
 @onready var key_image = preload("res://item/Key.png")
 @onready var animation = $AnimationPlayer
 
-func _process(delta):
+func _process(_delta):
 	animation.play("idle")
 	
 func get_key():

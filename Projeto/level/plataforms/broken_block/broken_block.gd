@@ -13,12 +13,12 @@ var is_triggered := false
 func _ready():
 	set_physics_process(false)
 	
-func has_collided_with(collider: CharacterBody2D):
+func has_collided_with(_collider: CharacterBody2D):
 	if !is_triggered:
 		is_triggered = true
 		animation.play("shake")    
 
-func _on_animation_player_animation_finished(anim_name):
+func _on_animation_player_animation_finished(_anim_name):
 	var tween = create_tween()
 	$GPUParticles2D.emitting = true
 	tween.tween_property(self, "modulate:a", 0, 0.4)

@@ -20,7 +20,7 @@ var _gravity = 980 * 2
 var _direction = 1
 var _is_double_jump: bool = false
 var _start_posisition: Vector2
-var _last_checkpoint = 1
+#var _last_checkpoint = 1
 var double_jump_power_up: bool = false
 var slow_fall_power_up: bool = false
 var is_shocked: bool = false
