@@ -11,3 +11,4 @@ res://level/level5.tscn
 res://level/level6.tscn
 res://player_bot/player_bot.gd
 res://game_init.gd
+res://player_bot/item_collector.gd

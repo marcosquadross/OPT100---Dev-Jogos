@@ -12,6 +12,7 @@ func _on_area_entered(item) -> void:
 		item_collected.emit(item)
 		_total_items += item.get_value()
 		gc.update_hud_items(_total_items)
+		collect.play()
 		item.queue_free()
 	elif item is KeyItem:
 		player.has_key = true
