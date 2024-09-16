@@ -14,7 +14,7 @@ const MAX_JUMP_FORCE: float = 0.7
 @onready var jump_sfx: AudioStreamPlayer = $JumpSFX 
 @onready var jump_power_bar: ProgressBar = get_node("/root/World/PlayerBot/ProgressBar")
 
-const DEBUG: bool = false
+const DEBUG: bool = true
 var jump_time: float = 0
 var _gravity = 980 * 2
 var _direction = 1
