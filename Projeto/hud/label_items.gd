@@ -8,4 +8,4 @@ func _ready() -> void:
 
 func update_value(value: int) -> void:
 	_items = value
-	self.text = "Items: %04d" % _items
+	self.text = "Score: %04d" % _items
